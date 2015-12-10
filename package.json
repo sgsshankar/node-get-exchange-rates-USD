@@ -1,5 +1,5 @@
 {
-  "name": "get-exchange-rates-USD",
+  "name": "get-exchange-rates-usd",
   "version": "1.0.0",
   "description": "Exchange rates for Bitcoin and major national currencies in USD. No API key required.",
   "main": "index.js",

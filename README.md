@@ -74,7 +74,7 @@ A simple example:
 
 ```javascript
 var Promise = require("bluebird");
-var getExchangeRates = require("get-exchange-rates");
+var getExchangeRates = require("get-exchange-rates-usd");
 
 Promise.try(function() {
 	return getExchangeRates();
