@@ -13,7 +13,7 @@ Rates are automatically cached for 5 minutes (but this is configurable), and the
 Currently supported currencies (and their sources):
 
 * BTC - Bitcoin (Blockchain.info)
-* USD - United States Dollar (ECB, via fixer.io)
+* EUR- Euros (ECB, via fixer.io)
 * CAD - Canadian Dollar (ECB, via fixer.io)
 * GBP - British Pound (ECB, via fixer.io)
 * CNY - Chinese Yuan (ECB, via fixer.io)
