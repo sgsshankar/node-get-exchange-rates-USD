@@ -1,20 +1,20 @@
 {
-  "name": "get-exchange-rates",
+  "name": "get-exchange-rates-USD",
   "version": "1.0.0",
-  "description": "Exchange rates for Bitcoin and major national currencies. No API key required.",
+  "description": "Exchange rates for Bitcoin and major national currencies in USD. No API key required.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/joepie91/node-get-exchange-rates"
+    "url": "git://github.com/sgsshankar/node-get-exchange-rates-USD.git"
   },
   "keywords": [
     "exchange rates",
     "currency"
   ],
-  "author": "Sven Slootweg",
+  "author": "Sven Slootweg, sgsshankar",
   "license": "WTFPL",
   "dependencies": {
     "bhttp": "^1.2.1",

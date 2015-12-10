@@ -11,13 +11,13 @@ module.exports = (cacheExpiration) ->
 			# We need fresh API data, our cache has expired.
 			Promise.try ->
 				Promise.all [
-					bhttp.get "http://api.fixer.io/latest", decodeJSON: true
+					bhttp.get "http://api.fixer.io/latest?base=USD", decodeJSON: true
 					bhttp.get "https://blockchain.info/ticker", decodeJSON: true
 				]
 			.spread (fixerRates, blockchainRates) ->
-				eurRates = fixerRates.body.rates
-				eurRates.BTC = 1 / blockchainRates.body.EUR["15m"]
-				return eurRates
+				USDRates = fixerRates.body.rates
+				USDRates.BTC = 1 / blockchainRates.body.USD["15m"]
+				return USDRates
 			.then (rates) ->
 				lastRates = rates
 				lastRateCheck = Date.now()

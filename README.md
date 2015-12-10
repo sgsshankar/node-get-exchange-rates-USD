@@ -1,10 +1,12 @@
 # get-exchange-rates
 
-A simple way to get up-to-date exchange rates for Bitcoin and major national currencies. Does *not* require an API key.
+A simple way to get up-to-date exchange rates for Bitcoin and major national currencies. Does *not* require an API key. 
+
+If you need the base in EURO, please use [this](https://github.com/joepie91/node-get-exchange-rates)
 
 # Data format
 
-The base is currently in Euro - this means that the rates will indicate how much `currency` is equivalent to 1 Euro.
+The base is currently in US Dollars - this means that the rates will indicate how much `currency` is equivalent to 1 USD.
 
 Rates are automatically cached for 5 minutes (but this is configurable), and there's currently no historical rate search.
 
@@ -50,11 +52,11 @@ Note that fixer.io currencies are subject to change; the module does not current
 
 ## License
 
-[WTFPL](http://www.wtfpl.net/txt/copying/) or [CC0](https://creativecommons.org/publicdomain/zero/1.0/), whichever you prefer. A donation and/or attribution are appreciated, but not required.
+[WTFPL](http://www.wtfpl.net/txt/copying/) or [CC0](https://creativecommons.org/publicdomain/zero/1.0/), whichever you prefer. A donation to [joepie91](http://cryto.net/~joepie91) and/or attribution are appreciated, but not required.
 
 ## Donate
 
-My income consists largely of donations for my projects. If this module is useful to you, consider [making a donation](http://cryto.net/~joepie91/donate.html)!
+joepie91's income consists largely of donations for my projects. If this module is useful to you, consider [making a donation](http://cryto.net/~joepie91/donate.html) to him!
 
 You can donate using Bitcoin, PayPal, Flattr, cash-in-mail, SEPA transfers, and pretty much anything else.
 
@@ -77,11 +79,11 @@ var getExchangeRates = require("get-exchange-rates");
 Promise.try(function() {
 	return getExchangeRates();
 }).then(function(rates) {
-	var amountInEuro = 2;
-	var amountInUSD = amountInEuro * rates.USD;
+	var amountInUSD = 2;
+	var amountInEuro = amountInEuro * rates.EURO;
 	
-	console.log(amountInEuro + " EUR = " + amountInUSD + " USD");
-	// eg. "2 EUR = 2.2838 USD"
+	console.log(amountInUSD + " USD = " + amountInEURO + " EURO");
+	// eg. "1 USD = 1.75146 EURO"
 })
 ```
 
