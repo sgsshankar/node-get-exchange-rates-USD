@@ -98,3 +98,7 @@ Returns a Promise, that resolves with an object containing the rates.
 The function will never reject - if either of the APIs is unavailable, the function will simply return stale rates. This may be changed at a later point (and will, in line with semantic versioning, result in a major version bump).
 
 * __cacheExpiration__: *Optional, defaults to 5 minutes.* The duration in seconds, after which the cache should expire. The first call after this duration will result in the cache being repopulated. This option will only take effect if the result is retrieved remotely. __Be respectful to the API operators; please do not set this lower than 5 minutes (300 seconds).__
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sgsshankar/node-get-exchange-rates-usd/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
